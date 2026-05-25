@@ -1,0 +1,102 @@
+read.csv("/Users/rashisingh/SAMARTH/students.csv")
+data_students <- read.csv("/Users/rashisingh/SAMARTH/students.csv")
+
+
+# DATA CLEANING
+# Q6
+
+# Renaming q6
+colnames(data_students)[colnames(data_students) ==
+                   "Q6. Which of these do you use? (Tick all that apply)"] <- "Q6"
+
+
+# Create new 3-category variable of SMARTPHONE, COMPUTER/LAPTOP, NONE 
+
+
+# USING IFELSE 
+
+# IF something is true → give one value, ELSE → give another value & grepl() CHECKS IF THE WORD/PATTERN EXISTS IN THE DATA & ignore.case = TRUE - MAKES CASE-INSENSITIVE 
+# thus, if someone has written smartphone, laptop- then it takes it as smartphone 
+
+data_students$q6_category <- ifelse(
+    grepl("Smartphone", data_students$Q6, ignore.case = TRUE),
+    "Smartphone",
+    
+    ifelse(
+        grepl("Computer or laptop", data_students$Q6, ignore.case = TRUE),
+        "Computer/Laptop",
+        
+        "None"
+    )
+)
+
+table(data_students$q6_category)
+
+View(data_students[, c(
+    "Q6..Which.of.these.do.you.use...Tick.all.that.apply.",
+    "q6_category"
+)])
+
+
+# Q10
+
+# Rename Q10 column 
+colnames(data_students)[11] <- "Q10"
+
+# Create binary variables
+
+data_students$q10_aiot <- ifelse(
+    grepl("AIoT / AI and Electronics",
+          data_students$Q10,
+          ignore.case = TRUE),
+    1, 0
+)
+
+data_students$q10_robotics <- ifelse(
+    grepl("Robotics",
+          data_students$Q10,
+          ignore.case = TRUE),
+    1, 0
+)
+
+data_students$q10_igniting_minds <- ifelse(
+    grepl("Igniting Minds / Psychometric Activities",
+          data_students$Q10,
+          ignore.case = TRUE),
+    1, 0
+)
+
+data_students$q10_cyber_hygiene <- ifelse(
+    grepl("Cyber Hygiene",
+          data_students$Q10,
+          ignore.case = TRUE),
+    1, 0
+)
+
+data_students$q10_none <- ifelse(
+    grepl("None",
+          data_students$Q10,
+          ignore.case = TRUE),
+    1, 0
+)
+
+
+View(data_students[, c(
+    "Q10",
+    "q10_aiot",
+    "q10_robotics",
+    "q10_igniting_minds",
+    "q10_cyber_hygiene",
+    "q10_none"
+)])
+
+
+colSums(data_students[, c(
+    "q10_aiot",
+    "q10_robotics",
+    "q10_igniting_minds",
+    "q10_cyber_hygiene",
+    "q10_none"
+)], na.rm = TRUE)
+
+
