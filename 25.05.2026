@@ -1,3 +1,20 @@
+library(cowplot)
+library(dplyr)
+library(expss)
+library(janitor)
+library(patchwork)
+library(ggplot2)
+library(sf)
+library(stringr)
+library(tidyverse)
+library(gapminder)
+library(lubridate)
+library(readxl)
+library(writexl)
+library(plotly)
+library(huxtable)
+
+
 read.csv("/Users/rashisingh/SAMARTH/students.csv")
 data_students <- read.csv("/Users/rashisingh/SAMARTH/students.csv")
 
@@ -5,18 +22,13 @@ data_students <- read.csv("/Users/rashisingh/SAMARTH/students.csv")
 # DATA CLEANING
 # Q6
 
-# Renaming q6
-colnames(data_students)[colnames(data_students) ==
-                   "Q6. Which of these do you use? (Tick all that apply)"] <- "Q6"
-
-
 # Create new 3-category variable of SMARTPHONE, COMPUTER/LAPTOP, NONE 
-
 
 # USING IFELSE 
 
 # IF something is true → give one value, ELSE → give another value & grepl() CHECKS IF THE WORD/PATTERN EXISTS IN THE DATA & ignore.case = TRUE - MAKES CASE-INSENSITIVE 
 # thus, if someone has written smartphone, laptop- then it takes it as smartphone 
+# i created a new column named q6_category
 
 data_students$q6_category <- ifelse(
     grepl("Smartphone", data_students$Q6, ignore.case = TRUE),
@@ -32,10 +44,7 @@ data_students$q6_category <- ifelse(
 
 table(data_students$q6_category)
 
-View(data_students[, c(
-    "Q6..Which.of.these.do.you.use...Tick.all.that.apply.",
-    "q6_category"
-)])
+
 
 
 # Q10
@@ -98,5 +107,92 @@ colSums(data_students[, c(
     "q10_cyber_hygiene",
     "q10_none"
 )], na.rm = TRUE)
+
+
+# NOW, DATA FREQUENCY AND PERCENTAGES 
+# tabcells formula doesn't use NA to calculate percentages and frequency 
+
+#Q2
+
+data_students %>%
+    tab_cells(Q2) %>%
+    tab_stat_cases(label = "Count") %>%
+    tab_stat_cpct(label = "Percent") %>%
+    tab_pivot()
+
+#Q3
+data_students %>%
+    tab_cells(Q3) %>%
+    tab_stat_cases(label = "Count") %>%
+    tab_stat_cpct(label = "Percent") %>%
+    tab_pivot()
+
+#Q5
+# converting empty strings to NA
+
+data_students <- data_students %>%
+    mutate(Q5 = na_if(Q5, ""))
+
+table(data_students$Q5, useNA = "ifany")
+
+# now combining other, prefer not to say and NA 
+
+data_students$Q5 <- as.character(data_students$Q5)
+
+data_students$Q5[data_students$Q5 %in% c("Other", "Prefer not to say") | is.na(data_students$Q5)] <- 
+    "Prefer not to say"
+
+table(data_students$Q5)
+
+data_students %>%
+    tab_cells(Q5) %>%
+    tab_stat_cases(label = "Count") %>%
+    tab_stat_cpct(label = "Percent") %>%
+    tab_pivot()
+
+# Q6
+
+data_students %>%
+    tab_cells(q6_category) %>%
+    tab_stat_cases(label = "Count") %>%
+    tab_stat_cpct(label = "Percent") %>%
+    tab_pivot()
+
+# Q7
+
+# CONVERTING MISSING TRINGS TO NA 
+data_students <- data_students %>%
+    mutate(Q7 = na_if(Q7, ""))
+
+table(data_students$Q7, useNA = "ifany")
+
+data_students %>%
+    tab_cells(Q7) %>%
+    tab_stat_cases(label = "Count") %>%
+    tab_stat_cpct(label = "Percent") %>%
+    tab_pivot()
+
+# Q8
+
+data_students <- data_students %>%
+    mutate(Q8 = na_if(Q8, ""))
+
+table(data_students$Q8, useNA = "ifany")
+
+data_students %>%
+    tab_cells(Q8) %>%
+    tab_stat_cases(label = "Count") %>%
+    tab_stat_cpct(label = "Percent") %>%
+    tab_pivot()
+
+
+# Q9
+
+data_students <- data_students %>%
+    mutate(Q9 = na_if(Q9, ""))
+
+table(data_students$Q9, useNA = "ifany")
+
+
 
 
