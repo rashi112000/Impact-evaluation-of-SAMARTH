@@ -194,5 +194,581 @@ data_students <- data_students %>%
 table(data_students$Q9, useNA = "ifany")
 
 
+# Q10 - ALL 
+
+# q10_aiot
+
+data_students <- data_students %>%
+    mutate(q10_aiot = na_if(q10_aiot, ""))
+
+table(data_students$Q9, useNA = "ifany")
+
+data_students %>%
+    tab_cells(q10_aiot) %>%
+    tab_stat_cases(label = "Count") %>%
+    tab_stat_cpct(label = "Percent") %>%
+    tab_pivot()
 
 
+# q10_robotics
+
+data_students <- data_students %>%
+    mutate(q10_robotics = na_if(q10_robotics, ""))
+
+table(data_students$q10_robotics, useNA = "ifany")
+
+data_students %>%
+    tab_cells(q10_robotics) %>%
+    tab_stat_cases(label = "Count") %>%
+    tab_stat_cpct(label = "Percent") %>%
+    tab_pivot()
+
+# q10_igniting_minds
+
+data_students <- data_students %>%
+    mutate(q10_igniting_minds = na_if(q10_igniting_minds, ""))
+
+table(data_students$q10_igniting_minds, useNA = "ifany")
+
+data_students %>%
+    tab_cells(q10_igniting_minds) %>%
+    tab_stat_cases(label = "Count") %>%
+    tab_stat_cpct(label = "Percent") %>%
+    tab_pivot()
+
+
+# q10_cyber_hygiene
+
+data_students <- data_students %>%
+    mutate(q10_cyber_hygiene = na_if(q10_cyber_hygiene, ""))
+
+table(data_students$q10_cyber_hygiene, useNA = "ifany")
+
+data_students %>%
+    tab_cells(q10_cyber_hygiene) %>%
+    tab_stat_cases(label = "Count") %>%
+    tab_stat_cpct(label = "Percent") %>%
+    tab_pivot()
+
+
+# Q11
+
+data_students <- data_students %>%
+    mutate(Q11 = na_if(Q11, ""))
+
+table(data_students$Q11, useNA = "ifany")
+
+data_students %>%
+    tab_cells(Q11) %>%
+    tab_stat_cases(label = "Count") %>%
+    tab_stat_cpct(label = "Percent") %>%
+    tab_pivot()
+
+
+# Q12
+
+data_students <- data_students %>%
+    mutate(Q12 = na_if(Q12, ""))
+
+table(data_students$Q12, useNA = "ifany")
+
+data_students %>%
+    tab_cells(Q12) %>%
+    tab_stat_cases(label = "Count") %>%
+    tab_stat_cpct(label = "Percent") %>%
+    tab_pivot()
+
+
+# Q13
+
+data_students <- data_students %>%
+    mutate(Q13 = na_if(Q13, ""))
+
+table(data_students$Q13, useNA = "ifany")
+
+data_students %>%
+    tab_cells(Q13) %>%
+    tab_stat_cases(label = "Count") %>%
+    tab_stat_cpct(label = "Percent") %>%
+    tab_pivot()
+
+
+# Q14
+
+data_students <- data_students %>%
+    mutate(Q14 = na_if(Q14, ""))
+
+table(data_students$Q14, useNA = "ifany")
+
+data_students %>%
+    tab_cells(Q14) %>%
+    tab_stat_cases(label = "Count") %>%
+    tab_stat_cpct(label = "Percent") %>%
+    tab_pivot()
+
+
+# Q15
+
+# Q15a
+
+data_students <- data_students %>%
+    mutate(Q15a = na_if(Q15a, ""))
+
+table(data_students$Q15a, useNA = "ifany")
+
+data_students %>%
+    tab_cells(Q15a) %>%
+    tab_stat_cases(label = "Count") %>%
+    tab_stat_cpct(label = "Percent") %>%
+    tab_pivot()
+
+# Q15b
+
+data_students <- data_students %>%
+    mutate(Q15b = na_if(Q15b, ""))
+
+table(data_students$Q15b, useNA = "ifany")
+
+data_students %>%
+    tab_cells(Q15b) %>%
+    tab_stat_cases(label = "Count") %>%
+    tab_stat_cpct(label = "Percent") %>%
+    tab_pivot()
+
+
+# Q15c
+
+data_students <- data_students %>%
+    mutate(Q15c = na_if(Q15c, ""))
+
+table(data_students$Q15c, useNA = "ifany")
+
+data_students %>%
+    tab_cells(Q15c) %>%
+    tab_stat_cases(label = "Count") %>%
+    tab_stat_cpct(label = "Percent") %>%
+    tab_pivot()
+
+
+# Q15d
+
+data_students <- data_students %>%
+    mutate(Q15d = na_if(Q15d, ""))
+
+table(data_students$Q15d, useNA = "ifany")
+
+data_students %>%
+    tab_cells(Q15d) %>%
+    tab_stat_cases(label = "Count") %>%
+    tab_stat_cpct(label = "Percent") %>%
+    tab_pivot()
+
+
+# Q15e
+
+data_students <- data_students %>%
+    mutate(Q15e = na_if(Q15e, ""))
+
+table(data_students$Q15e, useNA = "ifany")
+
+data_students %>%
+    tab_cells(Q15e) %>%
+    tab_stat_cases(label = "Count") %>%
+    tab_stat_cpct(label = "Percent") %>%
+    tab_pivot()
+
+# Q16
+
+# Q16a
+
+data_students <- data_students %>%
+    mutate(Q16a = na_if(Q16a, ""))
+
+table(data_students$Q16a, useNA = "ifany")
+
+data_students %>%
+    tab_cells(Q16a) %>%
+    tab_stat_cases(label = "Count") %>%
+    tab_stat_cpct(label = "Percent") %>%
+    tab_pivot()
+
+# Q16b
+
+data_students <- data_students %>%
+    mutate(Q16b = na_if(Q156, ""))
+
+table(data_students$Q16b, useNA = "ifany")
+
+data_students %>%
+    tab_cells(Q16b) %>%
+    tab_stat_cases(label = "Count") %>%
+    tab_stat_cpct(label = "Percent") %>%
+    tab_pivot()
+
+
+# Q16c
+
+data_students <- data_students %>%
+    mutate(Q16c = na_if(Q16c, ""))
+
+table(data_students$Q16c, useNA = "ifany")
+
+data_students %>%
+    tab_cells(Q16c) %>%
+    tab_stat_cases(label = "Count") %>%
+    tab_stat_cpct(label = "Percent") %>%
+    tab_pivot()
+
+
+# Q16d
+
+data_students <- data_students %>%
+    mutate(Q16d = na_if(Q16d, ""))
+
+table(data_students$Q16d, useNA = "ifany")
+
+data_students %>%
+    tab_cells(Q16d) %>%
+    tab_stat_cases(label = "Count") %>%
+    tab_stat_cpct(label = "Percent") %>%
+    tab_pivot()
+
+
+# Q16e
+
+data_students <- data_students %>%
+    mutate(Q16e = na_if(Q16e, ""))
+
+table(data_students$Q16e, useNA = "ifany")
+
+data_students %>%
+    tab_cells(Q16e) %>%
+    tab_stat_cases(label = "Count") %>%
+    tab_stat_cpct(label = "Percent") %>%
+    tab_pivot()
+
+
+# Q17
+
+#Q17a
+
+data_students <- data_students %>%
+    mutate(Q17a = na_if(Q17a, ""))
+
+table(data_students$Q17a, useNA = "ifany")
+
+data_students %>%
+    tab_cells(Q17a) %>%
+    tab_stat_cases(label = "Count") %>%
+    tab_stat_cpct(label = "Percent") %>%
+    tab_pivot()
+
+#Q17b
+
+data_students <- data_students %>%
+    mutate(Q17b = na_if(Q17b, ""))
+
+table(data_students$Q17a, useNA = "ifany")
+
+data_students %>%
+    tab_cells(Q17b) %>%
+    tab_stat_cases(label = "Count") %>%
+    tab_stat_cpct(label = "Percent") %>%
+    tab_pivot()
+
+#Q17c
+
+data_students <- data_students %>%
+    mutate(Q17c = na_if(Q17c, ""))
+
+table(data_students$Q17c, useNA = "ifany")
+
+data_students %>%
+    tab_cells(Q17c) %>%
+    tab_stat_cases(label = "Count") %>%
+    tab_stat_cpct(label = "Percent") %>%
+    tab_pivot()
+
+#Q17d
+
+data_students <- data_students %>%
+    mutate(Q17d = na_if(Q17d, ""))
+
+table(data_students$Q17d, useNA = "ifany")
+
+data_students %>%
+    tab_cells(Q17d) %>%
+    tab_stat_cases(label = "Count") %>%
+    tab_stat_cpct(label = "Percent") %>%
+    tab_pivot()
+
+#Q17e
+
+data_students <- data_students %>%
+    mutate(Q17e = na_if(Q17e, ""))
+
+table(data_students$Q17e, useNA = "ifany")
+
+data_students %>%
+    tab_cells(Q17e) %>%
+    tab_stat_cases(label = "Count") %>%
+    tab_stat_cpct(label = "Percent") %>%
+    tab_pivot()
+
+
+#Q17f
+
+data_students <- data_students %>%
+    mutate(Q17f = na_if(Q17f, ""))
+
+table(data_students$Q17f, useNA = "ifany")
+
+data_students %>%
+    tab_cells(Q17f) %>%
+    tab_stat_cases(label = "Count") %>%
+    tab_stat_cpct(label = "Percent") %>%
+    tab_pivot()
+
+
+#Q18a
+
+data_students <- data_students %>%
+    mutate(Q18a = na_if(Q18a, ""))
+
+table(data_students$Q18a, useNA = "ifany")
+
+data_students %>%
+    tab_cells(Q18a) %>%
+    tab_stat_cases(label = "Count") %>%
+    tab_stat_cpct(label = "Percent") %>%
+    tab_pivot()
+
+#Q18b
+
+data_students <- data_students %>%
+    mutate(Q18b = na_if(Q18b, ""))
+
+table(data_students$Q18b, useNA = "ifany")
+
+data_students %>%
+    tab_cells(Q18b) %>%
+    tab_stat_cases(label = "Count") %>%
+    tab_stat_cpct(label = "Percent") %>%
+    tab_pivot()
+
+
+#Q18c
+
+data_students <- data_students %>%
+    mutate(Q18c = na_if(Q18c, ""))
+
+table(data_students$Q18c, useNA = "ifany")
+
+data_students %>%
+    tab_cells(Q18c) %>%
+    tab_stat_cases(label = "Count") %>%
+    tab_stat_cpct(label = "Percent") %>%
+    tab_pivot()
+
+
+#Q18d
+
+data_students <- data_students %>%
+    mutate(Q18d = na_if(Q18d, ""))
+
+table(data_students$Q18d, useNA = "ifany")
+
+data_students %>%
+    tab_cells(Q18d) %>%
+    tab_stat_cases(label = "Count") %>%
+    tab_stat_cpct(label = "Percent") %>%
+    tab_pivot()
+
+
+#Q19a
+
+data_students <- data_students %>%
+    mutate(Q19a = na_if(Q19a, ""))
+
+table(data_students$Q19a, useNA = "ifany")
+
+data_students %>%
+    tab_cells(Q19a) %>%
+    tab_stat_cases(label = "Count") %>%
+    tab_stat_cpct(label = "Percent") %>%
+    tab_pivot()
+
+#Q19b
+
+data_students <- data_students %>%
+    mutate(Q19b = na_if(Q19b, ""))
+
+table(data_students$Q19b, useNA = "ifany")
+
+data_students %>%
+    tab_cells(Q19b) %>%
+    tab_stat_cases(label = "Count") %>%
+    tab_stat_cpct(label = "Percent") %>%
+    tab_pivot()
+
+#Q19c
+
+data_students <- data_students %>%
+    mutate(Q19c = na_if(Q19c, ""))
+
+table(data_students$Q19c, useNA = "ifany")
+
+data_students %>%
+    tab_cells(Q19c) %>%
+    tab_stat_cases(label = "Count") %>%
+    tab_stat_cpct(label = "Percent") %>%
+    tab_pivot()
+
+
+#Q19d
+
+data_students <- data_students %>%
+    mutate(Q19d = na_if(Q19d, ""))
+
+table(data_students$Q19d, useNA = "ifany")
+
+data_students %>%
+    tab_cells(Q19d) %>%
+    tab_stat_cases(label = "Count") %>%
+    tab_stat_cpct(label = "Percent") %>%
+    tab_pivot()
+
+
+#Q19e
+
+data_students <- data_students %>%
+    mutate(Q19e = na_if(Q19e, ""))
+
+table(data_students$Q19e, useNA = "ifany")
+
+data_students %>%
+    tab_cells(Q19e) %>%
+    tab_stat_cases(label = "Count") %>%
+    tab_stat_cpct(label = "Percent") %>%
+    tab_pivot()
+
+
+#Q20a
+
+data_students <- data_students %>%
+    mutate(Q20a = na_if(Q20a, ""))
+
+table(data_students$Q20a, useNA = "ifany")
+
+data_students %>%
+    tab_cells(Q20a) %>%
+    tab_stat_cases(label = "Count") %>%
+    tab_stat_cpct(label = "Percent") %>%
+    tab_pivot()
+
+#Q20b
+
+data_students <- data_students %>%
+    mutate(Q20b = na_if(Q20b, ""))
+
+table(data_students$Q20b, useNA = "ifany")
+
+data_students %>%
+    tab_cells(Q20b) %>%
+    tab_stat_cases(label = "Count") %>%
+    tab_stat_cpct(label = "Percent") %>%
+    tab_pivot()
+
+#Q20c
+
+data_students <- data_students %>%
+    mutate(Q20c = na_if(Q20c, ""))
+
+table(data_students$Q20c, useNA = "ifany")
+
+data_students %>%
+    tab_cells(Q20c) %>%
+    tab_stat_cases(label = "Count") %>%
+    tab_stat_cpct(label = "Percent") %>%
+    tab_pivot()
+
+#Q20d
+
+data_students <- data_students %>%
+    mutate(Q20a = na_if(Q20d, ""))
+
+table(data_students$Q20d, useNA = "ifany")
+
+data_students %>%
+    tab_cells(Q20d) %>%
+    tab_stat_cases(label = "Count") %>%
+    tab_stat_cpct(label = "Percent") %>%
+    tab_pivot()
+
+
+#Q21a
+
+data_students <- data_students %>%
+    mutate(Q21a = na_if(Q21a, ""))
+
+table(data_students$Q21a, useNA = "ifany")
+
+data_students %>%
+    tab_cells(Q21a) %>%
+    tab_stat_cases(label = "Count") %>%
+    tab_stat_cpct(label = "Percent") %>%
+    tab_pivot()
+
+#Q21b
+
+data_students <- data_students %>%
+    mutate(Q21b = na_if(Q21b, ""))
+
+table(data_students$Q21b, useNA = "ifany")
+
+data_students %>%
+    tab_cells(Q21b) %>%
+    tab_stat_cases(label = "Count") %>%
+    tab_stat_cpct(label = "Percent") %>%
+    tab_pivot()
+
+
+#Q21c
+
+data_students <- data_students %>%
+    mutate(Q21c = na_if(Q21c, ""))
+
+table(data_students$Q21c, useNA = "ifany")
+
+data_students %>%
+    tab_cells(Q21c) %>%
+    tab_stat_cases(label = "Count") %>%
+    tab_stat_cpct(label = "Percent") %>%
+    tab_pivot()
+
+#Q21d
+
+data_students <- data_students %>%
+    mutate(Q21d = na_if(Q21d, ""))
+
+table(data_students$Q21a, useNA = "ifany")
+
+data_students %>%
+    tab_cells(Q21d) %>%
+    tab_stat_cases(label = "Count") %>%
+    tab_stat_cpct(label = "Percent") %>%
+    tab_pivot()
+
+
+#Q21e
+
+data_students <- data_students %>%
+    mutate(Q21e = na_if(Q21e, ""))
+
+table(data_students$Q21e, useNA = "ifany")
+
+data_students %>%
+    tab_cells(Q21e) %>%
+    tab_stat_cases(label = "Count") %>%
+    tab_stat_cpct(label = "Percent") %>%
+    tab_pivot()
