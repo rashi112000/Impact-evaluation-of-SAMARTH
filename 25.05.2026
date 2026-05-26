@@ -42,7 +42,7 @@ data_students$q6_category <- ifelse(
     )
 )
 
-table(data_students$q6_category)
+table(data_students$q6_category) # 798 total 
 
 
 
@@ -192,6 +192,12 @@ data_students <- data_students %>%
     mutate(Q9 = na_if(Q9, ""))
 
 table(data_students$Q9, useNA = "ifany")
+
+data_students %>%
+    tab_cells(Q9) %>%
+    tab_stat_cases(label = "Count") %>%
+    tab_stat_cpct(label = "Percent") %>%
+    tab_pivot()
 
 
 # Q10 - ALL 
@@ -395,7 +401,7 @@ data_students %>%
 # Q16b
 
 data_students <- data_students %>%
-    mutate(Q16b = na_if(Q156, ""))
+    mutate(Q16b = na_if(Q16b, ""))
 
 table(data_students$Q16b, useNA = "ifany")
 
@@ -443,6 +449,19 @@ table(data_students$Q16e, useNA = "ifany")
 
 data_students %>%
     tab_cells(Q16e) %>%
+    tab_stat_cases(label = "Count") %>%
+    tab_stat_cpct(label = "Percent") %>%
+    tab_pivot()
+
+# Q16f
+
+data_students <- data_students %>%
+    mutate(Q16f = na_if(Q16f, ""))
+
+table(data_students$Q16f, useNA = "ifany")
+
+data_students %>%
+    tab_cells(Q16f) %>%
     tab_stat_cases(label = "Count") %>%
     tab_stat_cpct(label = "Percent") %>%
     tab_pivot()
