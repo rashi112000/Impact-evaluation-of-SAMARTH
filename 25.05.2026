@@ -791,3 +791,27 @@ data_students %>%
     tab_stat_cases(label = "Count") %>%
     tab_stat_cpct(label = "Percent") %>%
     tab_pivot()
+
+
+
+
+#CHECKING HOW MANY PEOPLE RESPONDED NO IN Q8
+
+students_q8_no <- data_students %>%
+  filter(Q8 == "No")
+
+nrow(students_q8_no) #110
+
+# Now to see what these students have responded
+View(students_q8_no)
+
+table(students_no_q8$Q2)
+
+# now for qualitative responses
+students_q8_no %>%
+  select(Q22, Q23, Q24, Q25, Q26, Q27a, Q27b, Q27c) %>%
+  View()
+
+
+
+
