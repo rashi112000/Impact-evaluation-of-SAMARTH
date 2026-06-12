@@ -813,5 +813,23 @@ students_q8_no %>%
   View()
 
 
+# Now, how many students answered these questions
+
+questions <- c("Q22", "Q23", "Q24", "Q25", "Q26", "Q27a", "Q27b", "Q27c")
+
+response_summary <- data.frame(
+  Question = questions,
+  Total_Students = nrow(students_q8_no),
+  Answered = sapply(questions, function(x)
+    sum(!is.na(students_q8_no[[x]]) & students_q8_no[[x]] != "")),
+  No_Response = sapply(questions, function(x)
+    sum(is.na(students_q8_no[[x]]) | students_q8_no[[x]] == ""))
+)
+
+response_summary$Percent_Answered <- round(
+  100 * response_summary$Answered / response_summary$Total_Students, 1
+)
+
+response_summary
 
 
